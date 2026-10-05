@@ -318,7 +318,7 @@
     var items = $$("li", rail);
     var fill = function () {
       var guard = 0;
-      while (rail.scrollWidth < innerWidth * 1.1 && guard++ < 8) items.forEach(function (li) { rail.appendChild(li.cloneNode(true)); });
+      while (rail.scrollWidth < innerWidth * 2 && guard++ < 8) items.forEach(function (li) { rail.appendChild(li.cloneNode(true)); });
       $$("li", rail).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute("aria-hidden", "true"); c.querySelector("img").alt = ""; rail.appendChild(c); });
     };
     fill();
